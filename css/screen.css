@@ -2,6 +2,18 @@
 #FONTS
 \*------------------------------------*/
 
+@font-face {
+    font-family: 'Inter Web';
+    src: url('../fonts/Inter-Regular.woff2') format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Inter Web';
+    src: url('../fonts/Inter-SemiBold.woff2') format('woff2');
+    font-weight: 700;
+}
+
 /*------------------------------------*\
 #Variables
 \*------------------------------------*/
@@ -23,12 +35,12 @@
 html {
     font-size: 16px;
     line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
-    color: grey;
+    font-family: 'Inter Web', Helvetica, arial, sans-serif;
+    color: #20223a;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: white;
+    background-color: #F5F6FA;
 }
 
 *,
@@ -51,7 +63,7 @@ html {
 }
 
 ::selection {
-    background: HotPink;
+    background: #3385FF;
     color: white;
     text-shadow: none;
 }
@@ -156,18 +168,22 @@ hr {
 }
 
 a {
-    color: HotPink;
+    color: #3385FF;
     transition: all .1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: HotPink;
+    color: #3385FF;
 }
 
 a:hover,
 a:focus {
-    color: DeepPink;
+    color: #3385FF;
+}
+
+label, input{
+    display: block;
 }
 
 /*------------------------------------*\
@@ -432,6 +448,27 @@ a:focus {
     Website main logo
 */
 
+.c-logo{
+    height: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.c-logo_svg{
+    height: 100%;
+}
+
+.c-logo_path-1{
+    fill: #20223A;
+}
+
+.c-logo_path-2{
+    fill: #3385FF;
+}
+
+.c-logo_path-3{
+    fill: #20223A;
+}
 /*
     Component: Card
     ---
@@ -444,15 +481,37 @@ a:focus {
     Everything form related here
 */
 
+.c-form-field_option{
+    display: flex;
+    gap: 8px;
+}
+
 /*
     Component: Input
     ---
     Class to put on all input="text" like form inputs
 */
 
-.c-input {}
+.c-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #E2E3E7;
+    border-radius: 3px;
+    font-family: 'Inter Web';
+    line-height: 24px;
+    padding: 11px 16px ;
+    outline: none;
+}
 
-.c-input:focus {}
+.c-input:focus {
+    border-color: #3385FF;
+    box-shadow: h-offset v-offset blur spread color;
+    box-shadow: 0 0 0 3px #3385ff4d;
+}
 
 /*
     Component: Label
